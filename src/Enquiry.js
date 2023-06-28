@@ -10,7 +10,7 @@ export default function Enquiry() {
 
         if (values.name.trim().length < 2)
             errors.name = "Invalid name";
-        if (!values.name.match('[A-Za-z ]+'))
+        if (!values.name.match('/^[A-Za-z ]+$/'))
             errors.name = "Name should contain only alphabets";
         if (values.phone.toString().length !== 10)
             errors.phone = "Invalid Phone No.";
